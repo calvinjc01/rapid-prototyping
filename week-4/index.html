@@ -9,25 +9,17 @@
 	<item><a href="../about.html">About</a></item>
 </topbar>
 
-## Update 3 - Focusing In
+## Update 4 - Energy Collection Approaches
 	
-We broke out into three groups: capture, storage, and use. I joined energy capture due to the wide variety of potential energy sources. I was especially interested in harnessing multiple types of energy simultaneously (i.e. solar, wind, and mechanical). In our group we discussed the density of different energy sources- with solar being the highest and rain the lowest (although we didn't do calculations for piezoelectricity). One concept that came up was developing a system to place on top of steps that would harness the energy of people walking up and down. I initially thought of piezoelectricity, but other members of the group brought up a rack and pinion mechanism to turn a turbine, which would improve the efficiency of the system. 
+As the energy collection team, we started researching the different approaches to harvest solar energy to cook food. We determined from the start that we wouldn't use photovoltaics and would instead work on how to focus sunlight onto a surface to heat it. The first step was to find an estimate of the power we could expect using this method. On average, the energy density of insolation is 21.6MJ/m^2 per day (ignoring clouds). Using this idealized figure, we adopted several approaches- from a Fresnel lens, to a parabolic mirror approximated by flat plates, to a linear Fresnel reflector. 
+	
+For a traditional Fresnel lens, the sunlight would pass through the lens with an efficiency of about 0.82. Multiplying this by the average daily insolation and an area of 0.627m^2 (the size of a commercially available Fresnel lens) gives a daily energy collection of approximately 11.1MJ. There are two main benefits to this design. First, the collection is very simple and requires little adjustment, which means more time can be spent optimizing the collection surface and heat transfer to the other systems in the project. Second, the collection surface can be positioned such that there is relatively even energy deposition across the surface, reducing losses. 
 
-Energy Density by Type:
-* Solar- 1.28kW
-* Rain- 100mW
-* Wind- 27.4W
-* Human- 28.2 W
-
-Ultimately, we thought of three ways to generate electricity: photovoltaics, turning a turbine, or piezoelectricity. Piezoelectrics are relatively inefficient and photovoltaics are well established and "too easy" for our design. This leaves turning a turbine to generate electricity. This category is fairly broad though as we can turn the turbine mechanically (such as using the rack and pinion outlined above) or by using steam, like a power plant. Since we need to generate a rotational force regardless, I was thinking about using a revolving door to generate electricity, although the lack of revolving doors around campus does pose a challenge to this concept. However, electricity isn't the only useful form of energy. Heat can be used to cook food, warm spaces, or heat water. Compost or geothermal can be used to warm spaces or water while solar can be concentrated to boil water or cook food. From here, our discussion slowed as much of the energy capture strategy is dependent on the use (i.e. heat vs. electricity, large vs. small scale).  
- 
-At the end of the week, we settled on the broader product idea of using renewable energy to cook food, heat water, or other similar applications. We also developed research questions:
-* Q: Have there been other attempts at renewable, on-demand cooking? A: A company called Sun Buckets has developed a similar 
-* Q: What temperature ranges are useful? A: Residential uses cap out around 500F, also depends on the cooking technique
-* Q: What are different materials to store heat? A: Water, solids, salt, wax
 	
 ![alternate text: Fresnel Lens Design](./Fresnel sketch.png)
 </xmp>
+	
+We also discussed different mechanisms for the collection to track the sun, using either photosensitive electronics, open source solar tracking code, or a manual hinge that could be adjusted in the morning and afternoon. We looked at absorptive surface treatments specially designed for solar collection purposes to maximize the energy collected and minimize the energy lost from radiation as well as heat pipes to transfer energy from our collection surface to the storage and cooking systems. One initial thought is to use the number heat pipes to control how much energy is allocated to each system, which could allow for more collection during the day and cooking at a range of temperatures.     
 
 <script src="https://strapdownjs.com/v/0.2/strapdown.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/joedf/strapdown-topbar@latest/assets/strapdown/strapdown-topbar.min.js"></script>
