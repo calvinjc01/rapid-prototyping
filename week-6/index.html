@@ -15,17 +15,11 @@ The solar tracking team began to look at various types of methods that could be 
 
 ![alternate text: Actuator Ideas](./actuators.png)
 	
-![alternate text: Solar Elevation Angle](https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Solar_altitude.svg/800px-Solar_altitude.svg.png)
-
-To address this issue I thought to replace the focusing tube with a collection hemisphere. This would collect the focused light regardless of the season more effectively but also introduces a significant challenge in its distance from the storage and cooking systems.
-
-![alternate text: Alternate Structure](./alternate_structure.png)
-
-Alternatively, we could embrace solar tracking and try to maximize the energy collected with one lens. I thought of two broad ideas for solar tracking. Parallel tracking, so called because the long side of the lens is parallel to the path of the sun, and perpendicular tracking, in which the long side of the lens is perpendicular to the path of the sun. Either of these methods could be paired with photosensitive electronics or a database of the sun's position in a certain location to control the motion of the lens. Parallel tracking is simpler in the fact that the axes of rotation are separate. However, the process of rotating the entire system to track the azimuthal angle every day may consume a lot of energy. Perpendicular tracking is more mechanically complicated as the joints between the lens and support must have multiple degrees of freedom. However, it might consume less energy by reducing the overall motion of the system per day.
+To control this movement, I began working on a solar tracking calculator. Fortunately, NOAA already has its own [calculator](https://gml.noaa.gov/grad/solcalc/) and an excel spreadsheet to perform all the calculations for the elevation and azimuathal angles of the sun throughout the day for a given date and location. Having a solar calculator controlling the motion of the motors would be beneficial in improving the efficiency of collection. It would also be entirely self contained, not relying on peripherals which could malfunction or be misled by reflections/clouds. This method would require some kind of user input for the location, unless a separate GPS chip is added to the system, and a separate clock to keep track of time. The GPS isn't wildly expensive and the clock is very cheap. The main obstacle will be reading data from these separate pieces into the software being used to perform the calculations.  
 	
-![alternate text: Parallel Tracking](./parallel_tracking.png)
-	
-![alternate text: Perpendicular Tracking](./perpendicular_tracking.png)
+Finally, I thought of a way to focus light down from a parabolic mirror. One of the main difficulties in using a mirror to collect solar energy is the fact that the focal point is above the mirror and our heavy storage container filled with molten salt must be on the ground. My idea is to have a reflective surface above the mirror that intercepts the light on its path to the focal point and changes its direction back toward the mirror. However, if the mirror has a hole beneath the reflector, this light will reach a focal point at some point below the mirror. The exact details, specifically the angles and how much efficiency would be lost, aren't fully fleshed out, but I think its a promising starting point for future iteration.
+
+![alternate text: Reflector](./reflector.png)
 
 </xmp>
 
