@@ -11,9 +11,13 @@
 
 ## Update 7 - Useful Energy Numbers and Prototype Photosensing
 
-To start, we calculated that we should have 1kW of power with which to cook. It can also be assumed that the insolation on a sunny day is 1kW/m^2. Using this as a benchmark, we determined that the mirror for collection should be ~3m^2 to take losses into account. This would give a diameter of approximately 2m for the hemispherical reflector. 
+To start, we calculated that we should have 1kW of power with which to cook. It can also be assumed that the insolation on a sunny day is 1kW/m^2. Using this as a benchmark, we determined that the mirror for collection should be ~3m^2 to take losses into account. This would give a diameter of approximately 2m for the hemispherical reflector, which would weigh approximately 14.4 kg. 
 	
-From there, we started to look into more solar tracking methods. One of these is using solar panels hidden behind the reflector. If the reflector is aligned, it's shadow will cover the solar panels. However, if it's misaligned, light will hit the panels, generating a current which will either activate a transistor or directly power the motors to turn the panel in the direction of the exposed panel until there is no more light.
+From there, we started to look into more solar tracking methods. One of these is using solar panels hidden behind the reflector. If the reflector is aligned, it's shadow will cover the solar panels. However, if it's misaligned, light will hit the panels, generating a current which will either activate a transistor or directly power the motors to turn the panel in the direction of the exposed panel until there is no more light. The other method uses photoresistors and employs the exact opposite of the previous strategy. If the relector is misaligned, a shadow will be cast on one or more of the photoresistors. The code will then send a signal to the motors telling them to move the reflector such that it is aligned with the sun and there are no more shadows on the photoresistors.
+
+![alternate text: photoresistor tracker][https://hackster.imgix.net/uploads/attachments/949870/uploads2ftmp2f3aedef35-1b8e-4c23-9704-c70929dae9882fimg_20190801_155710_rdNCuP4LAy.jpg?auto=compress%2Cformat&w=680&h=510&fit=max]
+	
+
 
 </xmp>
 
