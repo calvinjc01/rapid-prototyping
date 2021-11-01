@@ -20,7 +20,8 @@ From there, we started to look into more solar tracking methods. One of these is
 The other method uses photoresistors and employs the exact opposite of the previous strategy. If the relector is misaligned, a shadow will be cast on one or more of the photoresistors. The code will then send a signal to the motors telling them to move the reflector such that it is aligned with the sun and there are no more shadows on the photoresistors. The image below was taken from an [example solar tracking project](https://create.arduino.cc/projecthub/DemetrisEng/solar-tracker-35w-with-dc-motors-1b5ac6) on Arduino's Project Hub. 
 
 ![alternate text: photoresistor tracker](https://hackster.imgix.net/uploads/attachments/949870/uploads2ftmp2f3aedef35-1b8e-4c23-9704-c70929dae9882fimg_20190801_155710_rdNCuP4LAy.jpg?auto=compress%2Cformat&w=680&h=510&fit=max)
-	
+
+Regardless, either method requires a method to move the reflector. The azimuthal adjustment is easy enough to tak care of with a rotating base, like a turret. However, the elevation angle is a bit trickier. One solution is gears attached to a stepper motor, specifcally a bevel gear. This allows for higher mechanical advantage and efficiceny. However, this requires constant power input to prevent back driving. Alternatively, a worm screw will prevent backdriving through friction but is less efficient. An additional challenge is that we actually do want to reverse the elevation angle of the reflector in the second half of the day so backdriving is both a necessity and an additional power concern. This could be mitigated with a counterweight of some sort to balance some of the torque. 
 
 
 </xmp>
