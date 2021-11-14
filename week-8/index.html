@@ -13,8 +13,17 @@
 
 This week, we dove into the mechanics of how the solar tracking system would rotate. Our current design has light focused down through the center of the reflector and bounced off of a mirror onto the bottom of the salt battery. First, I performed trigonometric calculations to determine what kind of heights and distances would result in the light hitting the reflector when the sun is at an elevation angle of 20-30 degrees, the range of peak sunlight hours in Boston in late November. 
 
+![alternate text: trig](./mirror_calc.jpeg)
 
+These calculations yielded the following result: y'<= 10.833-y. By properly setting the heights and corresponding x-distances, we can keep the light focused on the salt battery throughout most of the peak daylight hours. 
+							    
+Then, I started working on the actual mechanism to rotate the reflector in the azimuthal direction. Our design relies on a stationary central column with a stepper motor that drives an outer ring through a rack and pinion mechanism. This outer ring will be mounted on roller ball bearings to reduce friction and will support the reflector and hopefully the salt box. However, the salt box is much larger than anticipated, so we might have to make the entire design larger to accomodate the box.
 
+![alternate text: base1](./Base1.png)
+							      
+![alternate text: base2](./Base2.png)
+							      
+![alternate text: base3](./Base3.png)								      
 </xmp>
 
 <script src="https://strapdownjs.com/v/0.2/strapdown.js"></script>
