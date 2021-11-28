@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<title>Calvin's Design Process</title>
+
+<xmp theme="journal" style="display:none;">
+
+<topbar style="display:none;">
+	<item><a href="../index.html">Home</a></item>
+	<item><a href="../about.html">About</a></item>
+</topbar>
+
+## Update 7 - Useful Energy Numbers and Prototype Photosensing
+
+To start, we calculated that we should have 1kW of power with which to cook. It can also be assumed that the insolation on a sunny day is 1kW/m^2. Using this as a benchmark, we determined that the mirror for collection should be ~3m^2 to take losses into account. This would give a diameter of approximately 2m for the hemispherical reflector, which would weigh approximately 14.4 kg. 
+	
+From there, we started to look into more solar tracking methods. One of these is using solar panels hidden behind the reflector. If the reflector is aligned, it's shadow will cover the solar panels. However, if it's misaligned, light will hit the panels, generating a current which will either activate a transistor or directly power the motors to turn the panel in the direction of the exposed panel until there is no more light. This example video demonstrates the method described above.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wL9PcGu_xrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+The other method uses photoresistors and employs the exact opposite of the previous strategy. If the relector is misaligned, a shadow will be cast on one or more of the photoresistors. The code will then send a signal to the motors telling them to move the reflector such that it is aligned with the sun and there are no more shadows on the photoresistors. The image below was taken from an [example solar tracking project](https://create.arduino.cc/projecthub/DemetrisEng/solar-tracker-35w-with-dc-motors-1b5ac6) on Arduino's Project Hub. 
+
+![alternate text: photoresistor tracker](https://hackster.imgix.net/uploads/attachments/949870/uploads2ftmp2f3aedef35-1b8e-4c23-9704-c70929dae9882fimg_20190801_155710_rdNCuP4LAy.jpg?auto=compress%2Cformat&w=680&h=510&fit=max)
+
+Regardless, either method requires a method to move the reflector. The azimuthal adjustment is easy enough to tak care of with a rotating base, like a turret. However, the elevation angle is a bit trickier. One solution is gears attached to a stepper motor, specifcally a bevel gear. This allows for higher mechanical advantage and efficiceny. However, this requires constant power input to prevent back driving. This could be mitigated with a counterweight of some sort to balance some of the torque. Alternatively, a worm screw will prevent backdriving through friction but is less efficient. A CAD model of an altazimuthal design for moving the reflector is shown below.
+
+![alternate text: altazimuthal](./Screen Shot 2021-11-03 at 2.12.51 PM.png)
+	
+At the midreview, we got helpful feedback from experts:
+	
+*How do we mitigate/prevent rain build up in the solar chimney?
+*How are we going to handle wind?
+*How difficult is it to integrate an electrical system?
+*Is the electrical system a necessity?
+
+The rain build up can be handled with a clear window over the chimney, but getting this window dirty would diminish the efficiency of the system. Wind is a difficult issue, possibly mitigated by a strong material choice and additional supports. The questions surrounding the electrical system are very fair but with the current design, it seems like accurate, active tracking is a necessity which requires electricity. 
+
+
+</xmp>
+
+<script src="https://strapdownjs.com/v/0.2/strapdown.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/joedf/strapdown-topbar@latest/assets/strapdown/strapdown-topbar.min.js"></script>
+</html>
